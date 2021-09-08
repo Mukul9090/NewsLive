@@ -27,6 +27,10 @@ export default class App extends Component {
         
         <Switch>
 
+        <Route path="/NewsLive">
+          <News country='us' category='general' />
+          </Route>
+
           <Route path="/home">
           <News country='us' category='general' />
           </Route>
