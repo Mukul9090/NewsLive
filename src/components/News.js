@@ -6,15 +6,11 @@ import spinner from "./spinner";
 
 export default class News extends Component {
   static defaultProps = {
-    country: "us",
+    country: "in",
     category: "general",
   };
 
-  static propTypes = {
-    country: PropTypes.string,
-    category: PropTypes.string,
-  };
-
+  
   constructor(props) {
     super(props);
     this.articles = [];
@@ -34,7 +30,7 @@ export default class News extends Component {
     let data = await fetch(url);
     let parsedata = await data.json();
     
-    console.log(parsedata.totalResults)
+    
 
     this.setState({
       totalResults: parsedata.totalResults,
